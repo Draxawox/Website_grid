@@ -1,17 +1,21 @@
 @media(min-width: 768px) {
+
     .cards {
         &__box {
             padding: 10em 2em;
         }
+
         &__card {
             &--one {
                 grid-row: 1/2;
                 grid-column: 1/4;
             }
+
             &--two {
                 grid-row: 1/2;
                 grid-column: 4/7;
             }
+
             &--three {
                 grid-row: 1/2;
                 grid-column: 7/10;
@@ -25,7 +29,7 @@
         &__box {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            text-align: center;
+            align-items: center;
         }
 
         &__item {
@@ -39,7 +43,6 @@
     }
 
     .newsletter {
-
         &__wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -51,7 +54,8 @@
         }
 
         &__form {
-            display: grid;grid-template-columns: 3fr 1fr;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
             gap: 20px;
 
             input {
@@ -62,15 +66,40 @@
 
     .gallery {
         grid-template-columns: repeat(4, 1fr);
-    
+
         img {
-            height: 300px;
-            width: 100%;
-            object-fit: cover;
-    
+
             &:nth-child(odd) {
                 display: block;
             }
         }
     }
+
+    .contact {
+        &__form {
+            gap: 30px;
+        }
+
+        &__form-box {
+            &:nth-child(1) {
+                grid-column: 1/4;
+                grid-row: 1/2;
+            }
+
+            &:nth-child(2) {
+                grid-column: 4/7;
+                grid-row: 1/2;
+            }
+
+            &:nth-child(3) {
+                grid-column: 1/-1;
+                grid-row: 2/3;
+            }
+        }
+
+        &__form-btn { 
+            grid-row: 3/4;
+        }
+    }
+
 }
